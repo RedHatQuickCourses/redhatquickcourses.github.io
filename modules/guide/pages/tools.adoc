@@ -1,0 +1,33 @@
+= 3. Development Tooling
+
+Antora, our publishing system, that converts asciidoc source to HTML, is based on the Node.js runtime.
+
+You need to install Node.js on your local workstation and perform several steps to configure a development environment.
+
+== Install Node.js
+
+On mac OS, install node using *homebrew*:
+
+```sh
+brew install node
+```
+
+On Fedora and RHEL based systems, use *dnf*:
+
+```sh
+sudo dnf install nodejs
+```
+
+On Ubuntu and Windows WSL2, use *apt*:
+
+```sh
+sudo apt install nodejs npm
+```
+
+== Install Visual Studio Code
+
+You can use any editor or IDE to edit asciidoc source code. However, we recommend *Visual Studio Code* for working on quick courses.
+
+Go to https://code.visualstudio.com/ and install Visual Studio Code for your platform.
+
+

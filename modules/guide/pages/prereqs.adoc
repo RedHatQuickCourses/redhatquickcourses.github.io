@@ -1,0 +1,12 @@
+= 1. Pre-requisites
+
+The quick courses use standard asciidoc for content authoring, which is then rendered to HTML and hosted by GitHub Pages. We use the Antora publishing platform (https://antora.org) to transform the asciidoc conent to HTML.
+
+To contribute, you need the following:
+
+* You have a Mac OS or Linux operating system based workstation to work with the asciidoc source. *Windows is not supported*, but you can try running WSL2 based Linux environments.
+* You must be familiar with using command line interfaces (terminal/shell) to install development tools, and to run commands.
+* You must be familiar with using Git (and specifically GitHub) for managing source code.
+* A GitHub account. If you do not have one, go to https://github.com and click on the `Sign up` button in the top right corner.
+* A basic understanding and familiarity with asciidoc (https://asciidoc.org/) to write technical documentation.
+

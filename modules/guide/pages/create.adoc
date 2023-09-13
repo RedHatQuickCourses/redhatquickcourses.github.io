@@ -1,0 +1,92 @@
+= 4. Creating Content
+
+You should have received commit access to the quick course(s) GitHub repository that you are contributing to.
+
+You will start off by cloning the source code from GitHub locally on your workstation.
+
+== Clone Source Code
+
+Clone the Git repository for a quick course to a folder of your choice. For the following steps in this guide, this folder is indicated by *$CONTENT_ROOT*:
+
+```sh
+git clone <quick course git url>
+```
+
+Identify the quick course git url by naviating to the GitHub repository for the quick course and then click on the green *<> Code* to expand it
+
+image::repo-url.png[title="Git repo URL"]
+
+Copy and paste the URL in the *git clone* command and hit enter.
+
+This command should download a copy of the latest source code tree for the quick course.
+
+The source code tree contains a number of configuration files and Antora specific directory structure that is optimized for simplicity and ease of quick course authoring.
+
+Each quick course repository contains a *README.md* at the root of the source code tree. Inspect it to understand how to work with the asciidoc source.
+
+== Install Antora and Other Development Tools
+
+* Navigate to the folder where you cloned the source code for the quick course (*$CONTENT_ROOT*) from the command line terminal:
+
+```sh
+$ cd $CONTENT_ROOT
+```
+
+* Run **npm install** to install Antora and other development tools
+
+```sh
+$ npm install
+```
+
+== Editing Asciidoc Source
+
+The Git repository contains the default chapter and section stubs with comments from the course product owner and architect to help guide you. Inspect the *$CONTENT_ROOT/antora.yml* file, which defines the top level modules (chapters) in this course. 
+
+The starting point (index page) for the course is rendered from asciidoc content in the *modules/ROOT/pages/index.adoc* file.
+
+Each top level module has a separate asciidoc file (*nav.adoc*) located in *modules/module_name/* folder. The *nav.adoc* lists the sections that make up the chapter/module.
+
+== Create a Local Git Branch
+
+*TODO*: This entire section could use a lot of screenshots for the newbie user.
+
+It is a Git best practice to make changes in a local Git *branch*, get the contents in the branch reviewed by your peers or the product owner/architect, and then merge your changes to the *main* branch, from which the HTML is rendered to the production website.
+
+Before you make any changes, create a local Git branch:
+
+```sh
+$ git checkout -b my_local_branch
+```
+
+Ensure that you use an appropriate branch name to easily identify your changes. *ch02s03*, *rhods_pipelines_lecture*, *bug_fix_issue_496* are good branch names. *mybranch*, *changes*, *hello123* are not.
+
+You are now ready to start making changes.
+
+To write narrative and hands-on lab content, edit the asciidoc files under *$CONTENT_ROOT/modules/module_name/pages*. You can use the *asciidoctor* plug-in preview plugin (Press **"Ctrl + Shift + V"** on Linux; Press **"Cmd + Shift + V"** on MacOS) to preview the rendered HTML content.
+
+== Previewing Generated HTML
+
+To preview the rendered website as it would look for end-users consuming this content, do the following:
+
+* Run the **npm run watch:adoc** command to automatically detect changes to your asciidoc content and invoke the Antora HTML generator:
+
+```bash
+$ npm run watch:adoc
+```
+
+Keep this terminal open as long as you are editing the asciidoc source code.
+
+* In another termainal window, run the **npm run serve** command that starts a local web server that serves the generated HTML content:
+
+```bash
+$ npm run serve
+```
+You will be shown the local URL (http://127.0.0.1:8080) where you can view the rendered content. Open the link in a web browser.
+
+Keep making changes in your asciidoc source files. The **npm watch** command will automatically detect your changes and re-generate the HTML content. Refresh your web browser to view the updated content.
+
+Keep this terminal open as long as you want to preview the generated HTML content.
+
+Once you are satisfied with your changes, you can close both terminal windows by pressing (**Ctrl + c**).
+
+NOTE: Automatic detection of asciidoc source code changes and HTML regeneration sometimes fails (for example, when your workstation goes to sleep or suspend mode). In such a scenario, press **Ctrl + c** in both terminal windows and restart the npm commands.

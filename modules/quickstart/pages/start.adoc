@@ -1,0 +1,53 @@
+= Quickstart
+
+This section will help you quickly get familiar with the content creation and publishing workflow using a sample quick course called *hello*.
+
+TODO: Record a video of the full end to end workflow using the hello quick course sample repo.
+
+== Prerequisites
+
+* mac OS or Linux workstation. Windows is not supported. Try your luck with an Ubuntu based Windows WSL2 install.
+* Git client
+* Node.js runtime.
+* Visual Studio Code IDE
+
+== Writing and Publishing Content
+
+. Install an LTS version of the Node.js runtime on your workstation.
+. Clone this Git repository to a folder of your choice. For the following steps in this README, this folder is indicated by *$CONTENT_ROOT*.
+. Install an editor of your choice. We recommend Visual Studio Code with the *asciidoctor* plug-in.
+. Follow the steps in the [*Previewing HTML content and publishing*](#Previewing-HTML-content-and-publishing) section.
+
+. All commands in the following steps are to be run from the *$CONTENT_ROOT* folder. Navigate to this folder from the VSCode terminal (Press **"Ctrl + \`"** on Linux; Press **"Ctrl + Shift + `"** on MacOS):
+
+    $ cd $CONTENT_ROOT
+
+. Run **npm install** to install the Node.js dependencies for the project.
+
+    $ npm install
+
+. The Git repository contains the default chapter and section stubs with comments from the course product owner and architect to help guide you. Inspect the *$CONTENT_ROOT/antora.yml* file, which defines the top level modules (chapters) in this course. 
+
+. The starting point (index page) for the course is rendered from asciidoc content in the *modules/ROOT/pages/index.adoc* file.
+
+. Each top level module has a separate asciidoc file (*nav.adoc*) located in *modules/module_name/* folder. The *nav.adoc* lists the sections that make up the chapter/module.
+
+. To write narrative and hands-on lab content, edit the asciidoc files under *$CONTENT_ROOT/modules/module_name/pages*. You can use the *asciidoctor* plug-in preview plugin (Press **"Ctrl + Shift + V"** on Linux; Press **"Cmd + Shift + V"** on MacOS) to preview the rendered HTML content.
+
+. To preview the rendered website as it would look for end-users consuming this content, do the following:
+
+. Run the **npm run watch:adoc** command to automatically detect changes to your asciidoc content and invoke the Antora HTML generator:
+
+    $ npm run watch:adoc
+
+. In another termainal window, run the **npm run serve** command that starts a local web server that serves the generated HTML content:
+
+    $ npm run serve
+
+. You will be shown the local URL where you can view the rendered content. Open the link in a web browser.Keep making changes in your asciidoc source files. The **npm watch** command will automatically detect your changes and re-generate the HTML content. Refresh your web browser to view the updated content
+
+. Once you are satisfied with how the HTML content is rendered locally in your workspace, you can commit your changes and do a **git push** to your branch.
+
+. Open a Pull Request so that the changes in your branch can be merged into the **main** branch of the course Git repository. A GitHub action runs on every merge & push to the **main** branch and publishes the HTML content to a GitHub Page.
+
+. After a few minutes, the GitHub action finishes and you can view the latest rendered asciidoc content at https://redhatquickcourses.github.io/qc-name, where *qc-name* is the name of your quick course GitHub repository.

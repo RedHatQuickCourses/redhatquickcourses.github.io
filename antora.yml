@@ -1,0 +1,8 @@
+name: welcome
+title: Red Hat Quick Courses
+version: 1
+nav:
+- modules/ROOT/nav.adoc
+- modules/quickstart/nav.adoc
+- modules/guide/nav.adoc
+- modules/faq/nav.adoc

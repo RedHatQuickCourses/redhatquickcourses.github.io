@@ -1,0 +1,20 @@
+= Red Hat Quick Courses
+:navtitle: Welcome
+
+== Introduction
+
+Welcome to Red Hat Quick Courses!
+
+**TODO:** Write some generic blurb about the quick course program here...
+
+== List of Quick Courses
+
+**TODO:** Link to the actual rendered course with design notes for these courses...
+
+* RHODS
+** Foundations
+** Data Analysis
+** Model Creation
+** Model Deployment and Serving
+** Data Science Pipelines
+** RHODS Administration

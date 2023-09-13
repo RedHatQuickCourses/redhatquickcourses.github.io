@@ -1,0 +1,43 @@
+= 5. Publishing Content
+
+*TODO*: This entire section could use a lot of screenshots for the newbie user.
+
+Once you are satisfied with how the HTML content is rendered locally in your workspace, you can commit your changes to your branch.
+
+* First, confirm that you are currently in your local branch, and not in *main*. Then, view and confirm all your changes:
+
+```sh
+$ git branch
+$ git status
+```
+
+* Add all the files you want to commit to the branch
+
+```sh
+$ git add .
+```
+
+* Commit your changes
+
+```sh
+$ git commit -m "added ABC section to XYZ chapter"
+```
+
+* Push your local branch to GitHub
+
+```sh
+$ git push -u origin <my_local_branch_name>
+```
+
+* Navigate to the quick course GitHub repository using a web browser. You should see a notification that a new branch was pushed and you will be prompted to create a *Pull Request (PR)*. Click the green button to create a pull request and assign it for review (either to a peer or to the product owner).
+
+* The pull request will be reviewed by one or more people. Address any changes that are requested by committing and pushing changes to *same* branch that you created the PR for. Once all changes are acceptable, you can merge the PR into the *main* branch.
+
+* Content in the production website is updated only with changes from the *main* branch. A GitHub action runs on every merge in the **main** branch and publishes the HTML content to the production website.
+
+* After a few minutes, the GitHub action finishes and you can view the latest rendered asciidoc content at https://redhatquickcourses.github.io/<qc-name>.
+
+## Problems and Feedback
+If you run into any issues, report bugs/suggestions/improvements about the quick course in its correspoding GitHub repository - https://github.com/RedHatQuickCourses/<qc-name>/issues
+
+Replace *qc-name* with the name of your quick course GitHub repository.

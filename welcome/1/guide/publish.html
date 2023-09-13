@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>5. Publishing Content :: Red Hat Quick Courses</title>
+    <link rel="prev" href="create.html">
+    <link rel="next" href="../faq/faq.html">
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://www.redhat.com" target="_blank"><img src="../../../_/img/redhat-logo.png" height="40px" alt="Red Hat"></a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">Red Hat Quick Courses</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://www.redhat.com/en/services/training-and-certification" target="_blank">Red Hat Training</a>
+        <a class="navbar-item" href="https://github.com/rsriniva/rhods-quick-course/issues" target="_blank">Report Issues</a>
+      </div>
+    </div>
+  </nav>
+</header><div class="body">
+<div class="nav-container" data-component="welcome" data-version="1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Red Hat Quick Courses</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Welcome</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../quickstart/start.html">Quickstart</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="overview.html">Contributor Guide</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="prereqs.html">1. Pre-requisites</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="git.html">2. Git Repositories</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tools.html">3. Development Tooling</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="create.html">4. Creating Content</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="publish.html">5. Publishing Content</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../faq/faq.html">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Red Hat Quick Courses</span>
+    <span class="version">1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Red Hat Quick Courses</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Red Hat Quick Courses</a></li>
+    <li><a href="overview.html">Contributor Guide</a></li>
+    <li><a href="publish.html">5. Publishing Content</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">5. Publishing Content</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>TODO</strong>: This entire section could use a lot of screenshots for the newbie user.</p>
+</div>
+<div class="paragraph">
+<p>Once you are satisfied with how the HTML content is rendered locally in your workspace, you can commit your changes to your branch.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>First, confirm that you are currently in your local branch, and not in <strong>main</strong>. Then, view and confirm all your changes:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">$ git branch
+$ git status</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Add all the files you want to commit to the branch</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">$ git add .</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Commit your changes</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">$ git commit -m "added ABC section to XYZ chapter"</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Push your local branch to GitHub</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">$ git push -u origin &lt;my_local_branch_name&gt;</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Navigate to the quick course GitHub repository using a web browser. You should see a notification that a new branch was pushed and you will be prompted to create a <strong>Pull Request (PR)</strong>. Click the green button to create a pull request and assign it for review (either to a peer or to the product owner).</p>
+</li>
+<li>
+<p>The pull request will be reviewed by one or more people. Address any changes that are requested by committing and pushing changes to <strong>same</strong> branch that you created the PR for. Once all changes are acceptable, you can merge the PR into the <strong>main</strong> branch.</p>
+</li>
+<li>
+<p>Content in the production website is updated only with changes from the <strong>main</strong> branch. A GitHub action runs on every merge in the <strong>main</strong> branch and publishes the HTML content to the production website.</p>
+</li>
+<li>
+<p>After a few minutes, the GitHub action finishes and you can view the latest rendered asciidoc content at <a href="https://redhatquickcourses.github.io/&lt;qc-name&gt" class="bare">https://redhatquickcourses.github.io/&lt;qc-name&gt</a>;.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_problems_and_feedback"><a class="anchor" href="#_problems_and_feedback"></a>Problems and Feedback</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you run into any issues, report bugs/suggestions/improvements about the quick course in its correspoding GitHub repository - <a href="https://github.com/RedHatQuickCourses/&lt;qc-name&gt;/issues" class="bare">https://github.com/RedHatQuickCourses/&lt;qc-name&gt;/issues</a></p>
+</div>
+<div class="paragraph">
+<p>Replace <strong>qc-name</strong> with the name of your quick course GitHub repository.</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="create.html">4. Creating Content</a></span>
+  <span class="next"><a href="../faq/faq.html">FAQs</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <img src="../../../_/img/rhl-logo-red.png" height="40px" alt="Red Hat"  href="https://redhat.com" >
+</footer><script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

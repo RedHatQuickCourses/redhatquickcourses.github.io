@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Quickstart :: Red Hat Quick Courses</title>
+    <title>Quickstart :: Quick Courses</title>
     <link rel="prev" href="../index.html">
     <link rel="next" href="../guide/overview.html">
     <meta name="generator" content="Antora 3.1.3">
@@ -15,18 +15,12 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://www.redhat.com" target="_blank"><img src="../../../_/img/redhat-logo.png" height="40px" alt="Red Hat"></a>
-      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">Red Hat Quick Courses</a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">Quick Courses</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
         <span></span>
       </button>
-    </div>
-    <div id="topbar-nav" class="navbar-menu">
-      <div class="navbar-end">
-        <a class="navbar-item" href="https://www.redhat.com/en/services/training-and-certification" target="_blank">Red Hat Training</a>
-        <a class="navbar-item" href="https://github.com/rsriniva/rhods-quick-course/issues" target="_blank">Report Issues</a>
-      </div>
     </div>
   </nav>
 </header><div class="body">
@@ -35,7 +29,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="../index.html">Red Hat Quick Courses</a></h3>
+    <h3 class="title"><a href="../index.html">Quick Courses</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
@@ -83,17 +77,24 @@
   </li>
 </ul>
   </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../support/support.html">Support</a>
+  </li>
+</ul>
+  </li>
 </ul>
   </nav>
 </div>
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
-    <span class="title">Red Hat Quick Courses</span>
+    <span class="title">Quick Courses</span>
     <span class="version">1</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Red Hat Quick Courses</a>
+      <a class="title" href="../index.html">Quick Courses</a>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="../index.html">1</a>
@@ -111,7 +112,7 @@
   <a href="../index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="../index.html">Red Hat Quick Courses</a></li>
+    <li><a href="../index.html">Quick Courses</a></li>
     <li><a href="start.html">Quickstart</a></li>
   </ul>
 </nav>
@@ -125,7 +126,10 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>This section will help you quickly get familiar with the content creation and publishing workflow using a sample quick course called <strong>hello</strong>.</p>
+<p>This quickstart guide is targeted at experienced developers who already know Git and Node.js tooling, and want to quickly get familiar with the content creation and publishing workflow for Quick Courses. For a more comprehensive tutorial, please review the <a href="../guide/overview.html" class="xref page">Contributor Guide</a>.</p>
+</div>
+<div class="paragraph">
+<p>This short guide will help you quickly get familiar with the content creation and publishing workflow using a sample quick course called <strong>hello</strong>.</p>
 </div>
 <div class="paragraph">
 <p>TODO: Record a video of the full end to end workflow using the hello quick course sample repo.</p>
@@ -138,16 +142,19 @@
 <div class="ulist">
 <ul>
 <li>
-<p>mac OS or Linux workstation. Windows is not supported. Try your luck with an Ubuntu based Windows WSL2 install.</p>
+<p>mac OS or Linux workstation. Windows is not supported. Try your luck with an Ubuntu based Windows WSL2 install</p>
 </li>
 <li>
 <p>Git client</p>
 </li>
 <li>
-<p>Node.js runtime.</p>
+<p>Node.js runtime</p>
 </li>
 <li>
 <p>Visual Studio Code IDE</p>
+</li>
+<li>
+<p>A basic understanding and familiarity with asciidoc (<a href="https://asciidoc.org/" class="bare">https://asciidoc.org/</a>) to write technical documentation</p>
 </li>
 </ul>
 </div>
@@ -165,10 +172,7 @@
 <p>Clone this Git repository to a folder of your choice. For the following steps in this README, this folder is indicated by <strong>$CONTENT_ROOT</strong>.</p>
 </li>
 <li>
-<p>Install an editor of your choice. We recommend Visual Studio Code with the <strong>asciidoctor</strong> plug-in.</p>
-</li>
-<li>
-<p>Follow the steps in the [<strong>Previewing HTML content and publishing</strong>](#Previewing-HTML-content-and-publishing) section.</p>
+<p>Install Visual Studio Code IDE with the <strong>asciidoctor</strong> plug-in.</p>
 </li>
 <li>
 <p>All commands in the following steps are to be run from the <strong>$CONTENT_ROOT</strong> folder. Navigate to this folder from the VSCode terminal (Press <strong>"Ctrl + \`"</strong> on Linux; Press <strong>"Ctrl + Shift + `"</strong> on MacOS):</p>
@@ -210,7 +214,7 @@
 </div>
 </li>
 <li>
-<p>In another termainal window, run the <strong>npm run serve</strong> command that starts a local web server that serves the generated HTML content:</p>
+<p>In another terminal window, run the <strong>npm run serve</strong> command. It starts a local web server that serves the generated HTML content for previewing the rendered content:</p>
 <div class="literalblock">
 <div class="content">
 <pre>$ npm run serve</pre>
@@ -218,7 +222,7 @@
 </div>
 </li>
 <li>
-<p>You will be shown the local URL where you can view the rendered content. Open the link in a web browser.Keep making changes in your asciidoc source files. The <strong>npm watch</strong> command will automatically detect your changes and re-generate the HTML content. Refresh your web browser to view the updated content</p>
+<p>You will be shown the local URL where you can view the rendered content. Open the link in a web browser.Keep making changes in your asciidoc source files. The <strong>npm watch</strong> command will automatically detect your changes and re-generate the HTML content. Refresh your web browser to view the updated content.</p>
 </li>
 <li>
 <p>Once you are satisfied with how the HTML content is rendered locally in your workspace, you can commit your changes and do a <strong>git push</strong> to your branch.</p>

@@ -1,9 +1,9 @@
-= Red Hat Quick Courses
+= Quick Courses
 :navtitle: Welcome
 
 == Introduction
 
-Welcome to Red Hat Quick Courses!
+Welcome to Quick Courses, brought to you by the Products and Technical Learning Team (PTL).
 
 **TODO:** Write some generic blurb about the quick course program here...
 

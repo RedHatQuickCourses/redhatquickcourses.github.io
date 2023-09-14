@@ -1,22 +1,24 @@
 = Quickstart
 
-This section will help you quickly get familiar with the content creation and publishing workflow using a sample quick course called *hello*.
+This quickstart guide is targeted at experienced developers who already know Git and Node.js tooling, and want to quickly get familiar with the content creation and publishing workflow for Quick Courses. For a more comprehensive tutorial, please review the xref:guide:overview.adoc[Contributor Guide].
+
+This short guide will help you quickly get familiar with the content creation and publishing workflow using a sample quick course called *hello*.
 
 TODO: Record a video of the full end to end workflow using the hello quick course sample repo.
 
 == Prerequisites
 
-* mac OS or Linux workstation. Windows is not supported. Try your luck with an Ubuntu based Windows WSL2 install.
+* mac OS or Linux workstation. Windows is not supported. Try your luck with an Ubuntu based Windows WSL2 install
 * Git client
-* Node.js runtime.
+* Node.js runtime
 * Visual Studio Code IDE
+* A basic understanding and familiarity with asciidoc (https://asciidoc.org/) to write technical documentation
 
 == Writing and Publishing Content
 
 . Install an LTS version of the Node.js runtime on your workstation.
 . Clone this Git repository to a folder of your choice. For the following steps in this README, this folder is indicated by *$CONTENT_ROOT*.
-. Install an editor of your choice. We recommend Visual Studio Code with the *asciidoctor* plug-in.
-. Follow the steps in the [*Previewing HTML content and publishing*](#Previewing-HTML-content-and-publishing) section.
+. Install Visual Studio Code IDE with the *asciidoctor* plug-in.
 
 . All commands in the following steps are to be run from the *$CONTENT_ROOT* folder. Navigate to this folder from the VSCode terminal (Press **"Ctrl + \`"** on Linux; Press **"Ctrl + Shift + `"** on MacOS):
 
@@ -40,11 +42,11 @@ TODO: Record a video of the full end to end workflow using the hello quick cours
 
     $ npm run watch:adoc
 
-. In another termainal window, run the **npm run serve** command that starts a local web server that serves the generated HTML content:
+. In another terminal window, run the **npm run serve** command. It starts a local web server that serves the generated HTML content for previewing the rendered content:
 
     $ npm run serve
 
-. You will be shown the local URL where you can view the rendered content. Open the link in a web browser.Keep making changes in your asciidoc source files. The **npm watch** command will automatically detect your changes and re-generate the HTML content. Refresh your web browser to view the updated content
+. You will be shown the local URL where you can view the rendered content. Open the link in a web browser.Keep making changes in your asciidoc source files. The **npm watch** command will automatically detect your changes and re-generate the HTML content. Refresh your web browser to view the updated content.
 
 . Once you are satisfied with how the HTML content is rendered locally in your workspace, you can commit your changes and do a **git push** to your branch.
 

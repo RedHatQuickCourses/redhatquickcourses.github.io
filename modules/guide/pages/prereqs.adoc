@@ -1,6 +1,6 @@
 = 1. Pre-requisites
 
-The quick courses use standard asciidoc for content authoring, which is then rendered to HTML and hosted by GitHub Pages. We use the Antora publishing platform (https://antora.org) to transform the asciidoc conent to HTML.
+The quick courses use standard asciidoc for content authoring, which is then rendered to HTML and hosted by GitHub Pages. We use the Antora publishing platform (https://antora.org) to transform the asciidoc content to HTML.
 
 To contribute, you need the following:
 

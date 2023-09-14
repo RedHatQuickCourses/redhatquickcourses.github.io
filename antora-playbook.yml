@@ -1,5 +1,5 @@
 site:
-  title: Red Hat Quick Courses
+  title: Quick Courses
   start_page: welcome::index.adoc
 
 content:

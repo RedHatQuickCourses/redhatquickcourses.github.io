@@ -12,7 +12,7 @@ Clone the Git repository for a quick course to a folder of your choice. For the 
 git clone <quick course git url>
 ```
 
-Identify the quick course git url by naviating to the GitHub repository for the quick course and then click on the green *<> Code* to expand it
+Identify the quick course git url by navigating to the GitHub repository for the quick course and then click on the green *<> Code* to expand it
 
 image::repo-url.png[title="Git repo URL"]
 
@@ -76,7 +76,7 @@ $ npm run watch:adoc
 
 Keep this terminal open as long as you are editing the asciidoc source code.
 
-* In another termainal window, run the **npm run serve** command that starts a local web server that serves the generated HTML content:
+* In another terminal window, run the **npm run serve** command that starts a local web server that serves the generated HTML content:
 
 ```bash
 $ npm run serve

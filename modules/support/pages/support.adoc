@@ -1,0 +1,8 @@
+= Support
+
+*TODO:* List the support channels here...
+
+* Google Chat
+* Email alias
+* Slack?
+* GitHub issues or some other ticketing system?

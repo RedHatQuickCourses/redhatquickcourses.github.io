@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>3. Development Tooling :: Quick Courses</title>
-    <link rel="prev" href="git.html">
-    <link rel="next" href="create.html">
+    <title>7. Course Maintenance :: Quick Courses</title>
+    <link rel="prev" href="publish.html">
+    <link rel="next" href="../faq/faq.html">
     <meta name="generator" content="Antora 3.1.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <script>var uiRootPath = '../../../_'</script>
@@ -50,7 +50,7 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="git.html">2. Git Repositories</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="2">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="tools.html">3. Development Tooling</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -62,7 +62,7 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="publish.html">6. Publishing Content</a>
   </li>
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="maintenance.html">7. Course Maintenance</a>
   </li>
 </ul>
@@ -113,7 +113,7 @@
   <ul>
     <li><a href="../index.html">Quick Courses</a></li>
     <li><a href="overview.html">Contributor Guide</a></li>
-    <li><a href="tools.html">3. Development Tooling</a></li>
+    <li><a href="maintenance.html">7. Course Maintenance</a></li>
   </ul>
 </nav>
 </div>
@@ -122,60 +122,52 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">3. Development Tooling</h1>
+<h1 class="page">7. Course Maintenance</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>Antora</strong>, our publishing system that converts asciidoc source to HTML, is based on the <strong>Node.js</strong> runtime.</p>
-</div>
-<div class="paragraph">
-<p>You need to install Node.js on your local workstation, and perform several steps to configure a development environment.</p>
+<p>This section outlines the process of ongoing maintenance of published courses.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_install_node_js"><a class="anchor" href="#_install_node_js"></a>Install Node.js</h2>
+<h2 id="_ongoing_maintenance_of_quick_courses"><a class="anchor" href="#_ongoing_maintenance_of_quick_courses"></a>Ongoing Maintenance of Quick Courses</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>On mac OS, install node using <strong>homebrew</strong>:</p>
+<p>The <strong>main</strong> branch always contains the latest published content for a course. For content updates, bug fixes and other enhancements to existing content, follow the same process you used for contributing to a new course.</p>
 </div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Ensure that you switch to the <strong>main</strong> branch. Fetch the latest changes to the <strong>main</strong> branch.</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">brew install node</code></pre>
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">$ git checkout main
+$ git pull</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>On Fedora and RHEL based systems, use <strong>dnf</strong>:</p>
-</div>
+</li>
+<li>
+<p>Create a new branch based on the latest contents from <strong>main</strong>.</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">sudo dnf install nodejs</code></pre>
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">$ git checkout -b &lt;branch_name&gt;</code></pre>
 </div>
 </div>
+</li>
+<li>
+<p>Make your content changes and then push them to GitHub.</p>
 <div class="paragraph">
-<p>On Ubuntu and Windows WSL2, use <strong>apt</strong>:</p>
+<p>Follow the steps listed in the <a href="review.html" class="xref page">Content Review</a> and <a href="publish.html" class="xref page">Publishing Content</a> sections to create a PR, get it reviewed, and then merge your PR back into <strong>main</strong> to publish the updated content to the production website.</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">sudo apt install nodejs npm</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_install_visual_studio_code"><a class="anchor" href="#_install_visual_studio_code"></a>Install Visual Studio Code</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>You can use any editor or IDE to edit asciidoc source code. However, we recommend <strong>Visual Studio Code</strong> for working on quick courses.</p>
-</div>
-<div class="paragraph">
-<p>Go to <a href="https://code.visualstudio.com/" class="bare">https://code.visualstudio.com/</a> and install Visual Studio Code for your platform.</p>
+</li>
+</ol>
 </div>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="git.html">2. Git Repositories</a></span>
-  <span class="next"><a href="create.html">4. Creating Content</a></span>
+  <span class="prev"><a href="publish.html">6. Publishing Content</a></span>
+  <span class="next"><a href="../faq/faq.html">FAQs</a></span>
 </nav>
 </article>
   </div>

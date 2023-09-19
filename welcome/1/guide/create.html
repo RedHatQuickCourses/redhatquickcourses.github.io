@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>4. Creating Content :: Quick Courses</title>
     <link rel="prev" href="tools.html">
-    <link rel="next" href="publish.html">
+    <link rel="next" href="review.html">
     <meta name="generator" content="Antora 3.1.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <script>var uiRootPath = '../../../_'</script>
@@ -41,13 +41,6 @@
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../quickstart/start.html">Quickstart</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="overview.html">Contributor Guide</a>
 <ul class="nav-list">
@@ -64,7 +57,13 @@
     <a class="nav-link" href="create.html">4. Creating Content</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="publish.html">5. Publishing Content</a>
+    <a class="nav-link" href="review.html">5. Content Review</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="publish.html">6. Publishing Content</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="maintenance.html">7. Course Maintenance</a>
   </li>
 </ul>
   </li>
@@ -137,17 +136,10 @@
 <div class="sect1">
 <h2 id="_clone_source_code"><a class="anchor" href="#_clone_source_code"></a>Clone Source Code</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Clone the Git repository for a quick course to a folder of your choice. For the following steps in this guide, this folder is indicated by <strong>$CONTENT_ROOT</strong>:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">git clone &lt;quick course git url&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Identify the quick course git url by navigating to the GitHub repository for the quick course and then click on the green <strong>&lt;&gt; Code</strong> to expand it</p>
-</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Identify the quick course git url by navigating to the GitHub repository for the quick course and then click on the green <strong>&lt; &gt; Code</strong> button to expand it</p>
 <div class="imageblock">
 <div class="content">
 <img src="_images/repo-url.png" alt="repo url">
@@ -155,45 +147,55 @@
 <div class="title">Figure 1. Git repo URL</div>
 </div>
 <div class="paragraph">
-<p>Copy and paste the URL in the <strong>git clone</strong> command and hit enter.</p>
+<p>Copy the SSH URL of the GitHub repository for the next step.</p>
+</div>
+</li>
+<li>
+<p>Clone the Git repository for a quick course to a folder of your choice. For the following steps in this guide, this folder is indicated by <strong>$CONTENT_ROOT</strong>:</p>
+<div class="literalblock">
+<div class="content">
+<pre>$ git clone &lt;quick course git url&gt;</pre>
+</div>
 </div>
 <div class="paragraph">
-<p>This command should download a copy of the latest source code tree for the quick course.</p>
+<p>Paste the URL of the Git repository you copied in the previous step. This command should download a copy of the latest source code tree for the quick course.</p>
 </div>
-<div class="paragraph">
+</li>
+<li>
 <p>The source code tree contains a number of configuration files and Antora specific directory structure that is optimized for simplicity and ease of quick course authoring.</p>
+</li>
+</ol>
 </div>
-<div class="paragraph">
-<p>Each quick course repository contains a <strong>README.md</strong> at the root of the source code tree. Inspect it to understand how to work with the asciidoc source.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/default-tree.png" alt="default tree">
+</div>
+<div class="title">Figure 2. Default source code tree</div>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_install_antora_and_other_development_tools"><a class="anchor" href="#_install_antora_and_other_development_tools"></a>Install Antora and Other Development Tools</h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>Navigate to the folder where you cloned the source code for the quick course (<strong>$CONTENT_ROOT</strong>) from the command line terminal:</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
+<div class="literalblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">$ cd $CONTENT_ROOT</code></pre>
+<pre>$ cd $CONTENT_ROOT</pre>
 </div>
 </div>
-<div class="ulist">
-<ul>
+</li>
 <li>
 <p>Run <strong>npm install</strong> to install Antora and other development tools</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
+<div class="literalblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">$ npm install</code></pre>
+<pre>$ npm install</pre>
 </div>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -201,13 +203,57 @@
 <h2 id="_editing_asciidoc_source"><a class="anchor" href="#_editing_asciidoc_source"></a>Editing Asciidoc Source</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Git repository contains the default chapter and section stubs with comments from the course product owner and architect to help guide you. Inspect the <strong>$CONTENT_ROOT/antora.yml</strong> file, which defines the top level modules (chapters) in this course.</p>
+<p>The Git repository contains the default chapter and section stubs with comments from the course product owner and architect to help guide you.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Inspect the <strong>$CONTENT_ROOT/antora.yml</strong> file. The list under the <code>nav</code> key defines the top level modules (chapters) in this course.
+This file also contains some basic metadata (name, title and version) about this quick course.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">name: hello
+title: Hello
+version: 1
+nav:
+- modules/ROOT/nav.adoc
+- modules/chapter1/nav.adoc
+- modules/chapter2/nav.adoc
+- modules/chapter3/nav.adoc
+- modules/appendix/nav.adoc</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Antora (our publishing system) looks for asciidoc source file under the <code>$CONTENT_ROOT/modules</code> folder.
+Each top level chapter in the quick course is a unique folder under the <code>modules</code> folder.</p>
+<div class="paragraph">
+<p>By convention, the entry point for each module is named <code>nav.adoc</code> and is located in the <code>$CONTENT_ROOT/modules/module_name</code> folder. This file lists the sections in the chapter.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">* xref:index.adoc[]
+** xref:section1.adoc[]
+** xref:section2.adoc[]
+** xref:section3.adoc[]</code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p>The starting point (index page) for the course is rendered from asciidoc content in the <strong>modules/ROOT/pages/index.adoc</strong> file.</p>
+<p>As a convention, the home page for a chapter is a file named <code>index.adoc</code>. The sections in a chapter are listed as nested entries under <code>index.adoc</code>.</p>
 </div>
-<div class="paragraph">
-<p>Each top level module has a separate asciidoc file (<strong>nav.adoc</strong>) located in <strong>modules/module_name/</strong> folder. The <strong>nav.adoc</strong> lists the sections that make up the chapter/module.</p>
+</li>
+<li>
+<p>The entry/starting point for the course is always called the <code>ROOT</code> module (the folder should be called <code>ROOT</code> under the <code>modules</code> folder), and is rendered from asciidoc content in the <strong>$CONTENT_ROOT/modules/ROOT/pages/index.adoc</strong> file.</p>
+</li>
+<li>
+<p>Image files for a chapter are stored in the <strong>$CONTENT_ROOT/modules/&lt;module_name&gt;/images</strong> folder. You can then reference the image files in asciidoc source using the <code>image::</code> attribute:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">image::image.png[title="caption/title for image"]</code></pre>
+</div>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -215,18 +261,30 @@
 <h2 id="_create_a_local_git_branch"><a class="anchor" href="#_create_a_local_git_branch"></a>Create a Local Git Branch</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>TODO</strong>: This entire section could use a lot of screenshots for the newbie user.</p>
+<p>It is a Git best practice to make changes in a local Git <strong>branch</strong>, and then get the contents in the branch reviewed by your peers or the product owner/architect.
+Finally, merge your changes to the <strong>main</strong> branch, from which the HTML is rendered to the production website.</p>
 </div>
-<div class="paragraph">
-<p>It is a Git best practice to make changes in a local Git <strong>branch</strong>, get the contents in the branch reviewed by your peers or the product owner/architect, and then merge your changes to the <strong>main</strong> branch, from which the HTML is rendered to the production website.</p>
-</div>
-<div class="paragraph">
-<p>Before you make any changes, create a local Git branch:</p>
-</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Before you make any changes, create a local Git branch and switch to it. From the <strong>$CONTENT_ROOT</strong> folder, run the <code>git branch</code> command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">$ git checkout -b my_local_branch</code></pre>
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">$ git checkout -b rsriniva/index_page_update
+Switched to a new branch 'rsriniva/index_page_update'</code></pre>
 </div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+It is a good practice to prefix the branch name with your GitHub ID or a string that uniquely identifies you.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>Ensure that you use an appropriate branch name to easily identify your changes. <strong>ch02s03</strong>, <strong>rhods_pipelines_lecture</strong>, <strong>bug_fix_issue_496</strong> are good branch names. <strong>mybranch</strong>, <strong>changes</strong>, <strong>hello123</strong> are not.</p>
@@ -234,8 +292,26 @@
 <div class="paragraph">
 <p>You are now ready to start making changes.</p>
 </div>
+</li>
+<li>
+<p>To add a new chapter to the course create a new folder under the <code>$CONTENT_ROOT/modules</code> directory and name it appropriately. Then, create the <code>nav.adoc</code> under the new module directory, followed by the <code>pages</code> and <code>images</code> folder. Add new sections for the chapter by creating new asciidoc files under the <code>pages</code> directory.</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
-<p>To write narrative and hands-on lab content, edit the asciidoc files under <strong>$CONTENT_ROOT/modules/module_name/pages</strong>. You can use the <strong>asciidoctor</strong> plug-in preview plugin (Press <strong>"Ctrl + Shift + V"</strong> on Linux; Press <strong>"Cmd + Shift + V"</strong> on MacOS) to preview the rendered HTML content.</p>
+<p>To write narrative and hands-on lab content, edit the asciidoc files under <strong>$CONTENT_ROOT/modules/module_name/pages</strong>. You can use the <strong>asciidoctor</strong> preview plug-in (Press <strong>"Ctrl + Shift + V"</strong> on Linux; Press <strong>"Cmd + Shift + V"</strong> on macOS) to preview the rendered HTML content.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The asciidoctor preview plugin does not show the actual rendered UI as seen by a student taking the course. It should be used as development tool to get a rough structural preview of the content.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -245,38 +321,49 @@
 <div class="paragraph">
 <p>To preview the rendered website as it would look for end-users consuming this content, do the following:</p>
 </div>
-<div class="ulist">
-<ul>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>Run the <strong>npm run watch:adoc</strong> command to automatically detect changes to your asciidoc content and invoke the Antora HTML generator:</p>
-</li>
-</ul>
-</div>
+<p>Run the <strong>npm run watch:adoc</strong> command from the <code>$CONTENT_ROOT</code> folder to automatically detect changes to your asciidoc content and invoke the Antora HTML generator:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ npm run watch:adoc</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ npm run watch:adoc
+&gt; watch:adoc
+&gt; watch 'npx antora antora-playbook.yml' ./modules
+
+&gt; Watching ./modules
+Site generation complete!
+...</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Keep this terminal open as long as you are editing the asciidoc source code.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>In another terminal window, run the <strong>npm run serve</strong> command that starts a local web server that serves the generated HTML content:</p>
 </li>
-</ul>
-</div>
+<li>
+<p>In another terminal window, run the <strong>npm run serve</strong> command from the <code>$CONTENT_ROOT</code> folder that starts a local web server that serves the generated HTML content:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ npm run serve</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ npm run serve
+&gt; serve
+&gt; npx http-server build/site -c-1
+
+Starting up http-server, serving build/site
+...
+Available on:
+  http://127.0.0.1:8080
+...
+Hit CTRL-C to stop the server</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>You will be shown the local URL (<a href="http://127.0.0.1:8080" class="bare">http://127.0.0.1:8080</a>) where you can view the rendered content. Open the link in a web browser.</p>
 </div>
-<div class="paragraph">
+</li>
+<li>
 <p>Keep making changes in your asciidoc source files. The <strong>npm watch</strong> command will automatically detect your changes and re-generate the HTML content. Refresh your web browser to view the updated content.</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p>Keep this terminal open as long as you want to preview the generated HTML content.</p>
@@ -298,9 +385,89 @@ Automatic detection of asciidoc source code changes and HTML regeneration someti
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_commit_and_push_branch_changes"><a class="anchor" href="#_commit_and_push_branch_changes"></a>Commit and Push Branch Changes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>After you are satisfied with how the HTML content is rendered locally in your workspace, you can commit your changes to your local branch.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>First, confirm that you are currently in your local branch, and not in <strong>main</strong>.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">$ git branch
+  main
+* rsriniva/index_page_update</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <code>*</code> before the branch name in the output of <code>git branch</code> indicates the current "active" branch.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Then, view and confirm all your changes:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">$ git status
+On branch rsriniva/index_page_update
+Changes not staged for commit:
+  (use "git add &lt;file&gt;..." to update what will be committed)
+  (use "git restore &lt;file&gt;..." to discard changes in working directory)
+	modified:   modules/ROOT/pages/index.adoc
+
+no changes added to commit (use "git add" and/or "git commit -a")</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Add all the files you want to commit to the branch.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">$ git add .</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Commit your changes.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">$ git commit -m "updated course index page"</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Push your local branch to GitHub. This command will create a new branch in the course GitHub repository.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">$ git push -u origin rsriniva/index_page_update
+...
+remote: Create a pull request for 'rsriniva/index_page_update' on GitHub by visiting:
+remote:      https://github.com/RedHatQuickCourses/hello/pull/new/rsriniva/index_page_update
+remote:
+To github.com:RedHatQuickCourses/hello.git
+ * [new branch]      rsriniva/index_page_update -&gt; rsriniva/index_page_update
+branch 'rsriniva/index_page_update' set up to track 'origin/rsriniva/index_page_update'.</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
 <nav class="pagination">
   <span class="prev"><a href="tools.html">3. Development Tooling</a></span>
-  <span class="next"><a href="publish.html">5. Publishing Content</a></span>
+  <span class="next"><a href="review.html">5. Content Review</a></span>
 </nav>
 </article>
   </div>

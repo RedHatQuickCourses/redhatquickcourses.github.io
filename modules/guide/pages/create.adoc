@@ -6,87 +6,187 @@ You will start off by cloning the source code from GitHub locally on your workst
 
 == Clone Source Code
 
-Clone the Git repository for a quick course to a folder of your choice. For the following steps in this guide, this folder is indicated by *$CONTENT_ROOT*:
-
-```sh
-git clone <quick course git url>
-```
-
-Identify the quick course git url by navigating to the GitHub repository for the quick course and then click on the green *<> Code* to expand it
-
+1. Identify the quick course git url by navigating to the GitHub repository for the quick course and then click on the green *< > Code* button to expand it
++
 image::repo-url.png[title="Git repo URL"]
++
+Copy the SSH URL of the GitHub repository for the next step.
 
-Copy and paste the URL in the *git clone* command and hit enter.
+2. Clone the Git repository for a quick course to a folder of your choice. For the following steps in this guide, this folder is indicated by *$CONTENT_ROOT*:
 
-This command should download a copy of the latest source code tree for the quick course.
+   $ git clone <quick course git url>
++
+Paste the URL of the Git repository you copied in the previous step. This command should download a copy of the latest source code tree for the quick course.
 
-The source code tree contains a number of configuration files and Antora specific directory structure that is optimized for simplicity and ease of quick course authoring.
+3. The source code tree contains a number of configuration files and Antora specific directory structure that is optimized for simplicity and ease of quick course authoring.
 
-Each quick course repository contains a *README.md* at the root of the source code tree. Inspect it to understand how to work with the asciidoc source.
+image::default-tree.png[title="Default source code tree"]
 
 == Install Antora and Other Development Tools
 
-* Navigate to the folder where you cloned the source code for the quick course (*$CONTENT_ROOT*) from the command line terminal:
+1. Navigate to the folder where you cloned the source code for the quick course (*$CONTENT_ROOT*) from the command line terminal:
 
-```sh
-$ cd $CONTENT_ROOT
-```
+   $ cd $CONTENT_ROOT
 
-* Run **npm install** to install Antora and other development tools
+2. Run **npm install** to install Antora and other development tools
 
-```sh
-$ npm install
-```
+   $ npm install
 
 == Editing Asciidoc Source
 
-The Git repository contains the default chapter and section stubs with comments from the course product owner and architect to help guide you. Inspect the *$CONTENT_ROOT/antora.yml* file, which defines the top level modules (chapters) in this course. 
+The Git repository contains the default chapter and section stubs with comments from the course product owner and architect to help guide you. 
 
-The starting point (index page) for the course is rendered from asciidoc content in the *modules/ROOT/pages/index.adoc* file.
+1. Inspect the *$CONTENT_ROOT/antora.yml* file. The list under the `nav` key defines the top level modules (chapters) in this course.
+This file also contains some basic metadata (name, title and version) about this quick course. 
++   
+```yaml
+name: hello
+title: Hello
+version: 1
+nav:
+- modules/ROOT/nav.adoc
+- modules/chapter1/nav.adoc
+- modules/chapter2/nav.adoc
+- modules/chapter3/nav.adoc
+- modules/appendix/nav.adoc
+```
+2. Antora (our publishing system) looks for asciidoc source file under the `$CONTENT_ROOT/modules` folder.
+Each top level chapter in the quick course is a unique folder under the `modules` folder.
++
+By convention, the entry point for each module is named `nav.adoc` and is located in the `$CONTENT_ROOT/modules/module_name` folder. This file lists the sections in the chapter.
++   
+```asciidoc
+* xref:index.adoc[]
+** xref:section1.adoc[]
+** xref:section2.adoc[]
+** xref:section3.adoc[]
+```
++
+As a convention, the home page for a chapter is a file named `index.adoc`. The sections in a chapter are listed as nested entries under `index.adoc`.
 
-Each top level module has a separate asciidoc file (*nav.adoc*) located in *modules/module_name/* folder. The *nav.adoc* lists the sections that make up the chapter/module.
+3. The entry/starting point for the course is always called the `ROOT` module (the folder should be called `ROOT` under the `modules` folder), and is rendered from asciidoc content in the *$CONTENT_ROOT/modules/ROOT/pages/index.adoc* file.
+
+4. Image files for a chapter are stored in the *$CONTENT_ROOT/modules/<module_name>/images* folder. You can then reference the image files in asciidoc source using the `image::` attribute:
++   
+```asciidoc
+image::image.png[title="caption/title for image"]
+```
 
 == Create a Local Git Branch
 
-*TODO*: This entire section could use a lot of screenshots for the newbie user.
+It is a Git best practice to make changes in a local Git *branch*, and then get the contents in the branch reviewed by your peers or the product owner/architect.
+Finally, merge your changes to the *main* branch, from which the HTML is rendered to the production website.
 
-It is a Git best practice to make changes in a local Git *branch*, get the contents in the branch reviewed by your peers or the product owner/architect, and then merge your changes to the *main* branch, from which the HTML is rendered to the production website.
-
-Before you make any changes, create a local Git branch:
-
+1. Before you make any changes, create a local Git branch and switch to it. From the *$CONTENT_ROOT* folder, run the `git branch` command:
++
 ```sh
-$ git checkout -b my_local_branch
+$ git checkout -b rsriniva/index_page_update
+Switched to a new branch 'rsriniva/index_page_update'
 ```
-
++
+NOTE: It is a good practice to prefix the branch name with your GitHub ID or a string that uniquely identifies you. 
++
 Ensure that you use an appropriate branch name to easily identify your changes. *ch02s03*, *rhods_pipelines_lecture*, *bug_fix_issue_496* are good branch names. *mybranch*, *changes*, *hello123* are not.
-
++
 You are now ready to start making changes.
 
-To write narrative and hands-on lab content, edit the asciidoc files under *$CONTENT_ROOT/modules/module_name/pages*. You can use the *asciidoctor* plug-in preview plugin (Press **"Ctrl + Shift + V"** on Linux; Press **"Cmd + Shift + V"** on MacOS) to preview the rendered HTML content.
+2. To add a new chapter to the course create a new folder under the `$CONTENT_ROOT/modules` directory and name it appropriately. Then, create the `nav.adoc` under the new module directory, followed by the `pages` and `images` folder. Add new sections for the chapter by creating new asciidoc files under the `pages` directory.
+
+To write narrative and hands-on lab content, edit the asciidoc files under *$CONTENT_ROOT/modules/module_name/pages*. You can use the *asciidoctor* preview plug-in (Press **"Ctrl + Shift + V"** on Linux; Press **"Cmd + Shift + V"** on macOS) to preview the rendered HTML content.
+
+NOTE: The asciidoctor preview plugin does not show the actual rendered UI as seen by a student taking the course. It should be used as development tool to get a rough structural preview of the content.
 
 == Previewing Generated HTML
 
 To preview the rendered website as it would look for end-users consuming this content, do the following:
 
-* Run the **npm run watch:adoc** command to automatically detect changes to your asciidoc content and invoke the Antora HTML generator:
-
+1. Run the **npm run watch:adoc** command from the `$CONTENT_ROOT` folder to automatically detect changes to your asciidoc content and invoke the Antora HTML generator:
++
 ```bash
 $ npm run watch:adoc
-```
+> watch:adoc
+> watch 'npx antora antora-playbook.yml' ./modules
 
+> Watching ./modules
+Site generation complete!
+...
+```
++
 Keep this terminal open as long as you are editing the asciidoc source code.
 
-* In another terminal window, run the **npm run serve** command that starts a local web server that serves the generated HTML content:
-
+2. In another terminal window, run the **npm run serve** command from the `$CONTENT_ROOT` folder that starts a local web server that serves the generated HTML content:
++
 ```bash
 $ npm run serve
+> serve
+> npx http-server build/site -c-1
+
+Starting up http-server, serving build/site
+...
+Available on:
+  http://127.0.0.1:8080
+...
+Hit CTRL-C to stop the server
 ```
 You will be shown the local URL (http://127.0.0.1:8080) where you can view the rendered content. Open the link in a web browser.
 
-Keep making changes in your asciidoc source files. The **npm watch** command will automatically detect your changes and re-generate the HTML content. Refresh your web browser to view the updated content.
+3. Keep making changes in your asciidoc source files. The **npm watch** command will automatically detect your changes and re-generate the HTML content. Refresh your web browser to view the updated content.
 
 Keep this terminal open as long as you want to preview the generated HTML content.
 
 Once you are satisfied with your changes, you can close both terminal windows by pressing (**Ctrl + c**).
 
 NOTE: Automatic detection of asciidoc source code changes and HTML regeneration sometimes fails (for example, when your workstation goes to sleep or suspend mode). In such a scenario, press **Ctrl + c** in both terminal windows and restart the npm commands.
+
+== Commit and Push Branch Changes
+
+After you are satisfied with how the HTML content is rendered locally in your workspace, you can commit your changes to your local branch.
+
+1. First, confirm that you are currently in your local branch, and not in *main*.
++
+```sh
+$ git branch
+  main
+* rsriniva/index_page_update
+```
++
+NOTE: The `*` before the branch name in the output of `git branch` indicates the current "active" branch.
+
++
+Then, view and confirm all your changes:
++
+```sh
+$ git status
+On branch rsriniva/index_page_update
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   modules/ROOT/pages/index.adoc
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+2. Add all the files you want to commit to the branch.
++
+```sh
+$ git add .
+```
+
+3. Commit your changes.
++
+```sh
+$ git commit -m "updated course index page"
+```
+
+4. Push your local branch to GitHub. This command will create a new branch in the course GitHub repository.
++
+```sh
+$ git push -u origin rsriniva/index_page_update
+...
+remote: Create a pull request for 'rsriniva/index_page_update' on GitHub by visiting:
+remote:      https://github.com/RedHatQuickCourses/hello/pull/new/rsriniva/index_page_update
+remote: 
+To github.com:RedHatQuickCourses/hello.git
+ * [new branch]      rsriniva/index_page_update -> rsriniva/index_page_update
+branch 'rsriniva/index_page_update' set up to track 'origin/rsriniva/index_page_update'.
+```

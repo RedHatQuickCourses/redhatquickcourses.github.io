@@ -1,0 +1,23 @@
+= 7. Course Maintenance
+
+This section outlines the process of ongoing maintenance of published courses.
+
+== Ongoing Maintenance of Quick Courses
+
+The *main* branch always contains the latest published content for a course. For content updates, bug fixes and other enhancements to existing content, follow the same process you used for contributing to a new course.
+
+1. Ensure that you switch to the *main* branch. Fetch the latest changes to the *main* branch.
++
+```sh
+$ git checkout main
+$ git pull
+```
+
+2. Create a new branch based on the latest contents from *main*.
++
+```sh
+$ git checkout -b <branch_name>
+```
+3. Make your content changes and then push them to GitHub.
++
+Follow the steps listed in the xref:review.adoc[Content Review] and xref:publish.adoc[Publishing Content] sections to create a PR, get it reviewed, and then merge your PR back into *main* to publish the updated content to the production website.

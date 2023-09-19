@@ -2,4 +2,5 @@
 
 Welcome to the quick courses contributor guide! This guide contains instructions on how to create and publish quick courses.
 
-Use the navigation menu in the left sidebar to access the various sections of the guide. First time users should simply follow the numbered sections of the guide in sequential order.
+Use the navigation menu in the left sidebar to access the various sections of the guide. 
+First time users should simply follow the numbered sections of the guide in sequential order.

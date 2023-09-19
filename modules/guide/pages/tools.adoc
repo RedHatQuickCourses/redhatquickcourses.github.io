@@ -1,8 +1,8 @@
 = 3. Development Tooling
 
-Antora, our publishing system, that converts asciidoc source to HTML, is based on the Node.js runtime.
+*Antora*, our publishing system that converts asciidoc source to HTML, is based on the *Node.js* runtime.
 
-You need to install Node.js on your local workstation and perform several steps to configure a development environment.
+You need to install Node.js on your local workstation, and perform several steps to configure a development environment.
 
 == Install Node.js
 

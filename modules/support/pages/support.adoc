@@ -1,8 +1,12 @@
 = Support
 
-*TODO:* List the support channels here...
+If you need any help, or have any questions about authoring or publishing a quick course, you can contact the PTL team using any of the below channels:
 
-* Google Chat
-* Email alias
-* Slack?
-* GitHub issues or some other ticketing system?
+* *Google Chat* - Post your queries in our google chat group - https://chat.google.com/room/AAAA6Fz1n4I?cls=7
+* *Email* - Send an email to mailto:ptl-products-team@redhat.com[ptl-products-team@redhat.com,role=email]
+* *Slack* - Post your queries in our slack channel https://app.slack.com/client/T027F3GAJ/C05RM9TSWUF
+
+If you have an issue, or want to make a suggestion about the contributor guide, or our website, open a GitHub issue at https://github.com/RedHatQuickCourses/redhatquickcourses.github.io/issues
+
+IMPORTANT: Each quick course lives in its own dedicated GitHub repository. If you have an issue, or want to make suggestions about specific quick courses, then open a GitHub issue in the respective GitHub repository of the course - https://github.com/RedHatQuickCourses/<qc-name>/issues. 
+Replace *qc-name* with the name of your quick course GitHub repository.

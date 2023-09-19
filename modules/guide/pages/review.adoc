@@ -1,0 +1,52 @@
+= 5. Content Review
+
+After you have pushed your local branch changes to GitHub, it is a good practice to get your changes reviewed by someone in the PTL team before the changes are actually published on the website.
+
+== Create Pull Request (PR)
+
+1. Navigate to the quick course GitHub repository using a web browser. You should see a notification that a new branch was pushed, and you will be prompted to create a *Pull Request (PR)*. 
++
+image::new-branch-gh.png[title="New Branch notification in GitHub"]
++
+Click the green `Compare & pull request` button to create a pull request.
+
+2. Select a reviewer (most often someone from the PTL team) from the `Reviewers` field. Leave a descriptive comment about the change and ensure that you have selected `main` as the branch you want to merge your changes into.
++
+image::open-pr-review.png[title="Create a pull request (PR)"]
++
+Click the `Create pull request` button to create the pull request. Your PR will be reviewed and you will receive an email notification informing you if the PR was approved, or if further changes are required.
+
+== Pull Request Review
+
+NOTE: This section is relevant only to content reviewers who have permissions to review and approve pull requests (PRs).
+
+1. Reviewers will be notified by email if and when a PR is ready for review.
++
+image::pr-reviewer-email.png[title="PR review email notification"]
++
+Reviewers can also view the PRs pending review on the GitHub `Pull requests` page of the course repository.
++
+image::pending-prs.png[title="List of PRs"]
+
+2. Click and open the PR you want to review. You can preview the rendered HTML content with the proposed changes in the PR by clicking on the link next to `Deployed preview to` line.
++
+image::pr-preview-gh-pages.png[title="Preview HTML rendering"]
+
+3. To leave review comments, click on the `Add your review` button
++
+image::pr-reviewer-add-review.png[title="Add Review comments to PR"]
+
+4. You will now be shown the `Files changed` tab where you should see the detailed list of files that have been changed or added, and the actual textual changes in them.
++
+image::pr-changes-diff.png[title="Diff of changes in PR"]
++
+You can now click on any of the `+` or `-` symbols next to the line numbers in the left side of the text and leave review comments on a line by line basis.
++
+image::review-comments.png[title="PR review comments"]
++
+Leave as many comments as you wish for the original author of the PR.
+
+5. After you have left review comments, you can either approve the PR, or request more changes from the author.
+Click the `Review changes` button followed by selecting the `Approve` or `Request changes` option, and then clicking `Submit review`. 
++
+image::pr-approve.png[title="Approve PR or Request Changes"]

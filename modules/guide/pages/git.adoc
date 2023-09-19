@@ -2,7 +2,7 @@
 
 == Request Access to a Quick Course Git Repository
 
-Each quick course lives in its own GitHub repository. To contribute to a quick course send an email to *plt-products-team@redhat.com* requesting access to the GitHub repositories for the quick courses you want to contribute to. Note that you must include the list of quick courses you want to contribute to (if you are contributing to more than one) in your email request.
+Each quick course lives in its own GitHub repository. To contribute to a quick course send an email to *ptl-products-team@redhat.com* requesting access to the GitHub repositories for the quick courses you want to contribute to. Note that you must include the list of quick courses you want to contribute to (if you are contributing to more than one) in your email request.
 
 You will receive an email invitation at your GitHub registered email address from GitHub. Follow the instructions in the email to get access to the quick course repository.
 
@@ -10,7 +10,7 @@ You will receive an email invitation at your GitHub registered email address fro
 
 To clone the asciidoc source code for a quick course on your local workstation, you need a Git client.
 
-If you are on Mac OS, install the latest Git client using *homebrew* (https://brew.sh/)
+If you are on mac OS, install the latest Git client using *homebrew* (https://brew.sh/)
 
 ```sh
 brew install git

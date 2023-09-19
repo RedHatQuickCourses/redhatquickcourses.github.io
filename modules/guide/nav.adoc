@@ -3,4 +3,6 @@
 ** xref:git.adoc[]
 ** xref:tools.adoc[]
 ** xref:create.adoc[]
+** xref:review.adoc[]
 ** xref:publish.adoc[]
+** xref:maintenance.adoc[]

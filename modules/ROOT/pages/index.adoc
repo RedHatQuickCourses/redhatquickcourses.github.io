@@ -5,16 +5,16 @@
 
 Welcome to Quick Courses, brought to you by the Products and Technical Learning Team (PTL).
 
-**TODO:** Write some generic blurb about the quick course program here...
+NOTE: **TODO:** Write some generic blurb about the quick course program here...
 
-== List of Quick Courses
+== High Level Process and Workflow
 
-**TODO:** Link to the actual rendered course with design notes for these courses...
+The following diagram shows the high level workflow for quick courses content creation and publishing.
 
-* RHODS
-** Foundations
-** Data Analysis
-** Model Creation
-** Model Deployment and Serving
-** Data Science Pipelines
-** RHODS Administration
+NOTE: **TODO:** A workflow diagram goes here.....
+
+== Demonstration Video
+
+The following video shows the complete end to end workflow, from content creation to publishing, for an example quick course called *hello*.
+
+NOTE: **TODO:** Video recording of end to end demo quick course goes here...

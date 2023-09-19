@@ -1,10 +1,12 @@
-= Quickstart
+= 6. Tutorial
 
-This quickstart guide is targeted at experienced developers who already know Git and Node.js tooling, and want to quickly get familiar with the content creation and publishing workflow for Quick Courses. For a more comprehensive tutorial, please review the xref:guide:overview.adoc[Contributor Guide].
+This quick tutorial will help you to quickly get familiar with the content creation and publishing workflow for quick courses.
 
-This short guide will help you quickly get familiar with the content creation and publishing workflow using a sample quick course called *hello*.
+You will work on a sample quick course called *hello*.
 
-TODO: Record a video of the full end to end workflow using the hello quick course sample repo.
+The following video shows the full end to end demo of the content authoring and publishing workflow.
+
+NOTE: TODO: Record a video of the full end to end workflow using the hello quick course sample repo and embed it here.
 
 == Prerequisites
 

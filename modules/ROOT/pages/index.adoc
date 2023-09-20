@@ -5,13 +5,40 @@
 
 Welcome to Quick Courses, brought to you by the Products and Technical Learning Team (PTL).
 
-NOTE: **TODO:** Write some generic blurb about the quick course program here...
+Red Hat needs technical product training and enablement content that is timely, relevant, and is of acceptable quality. 
+All content should be consumable by customers, internals, and partners. 
+
+Our current model, involving a lengthy development process (typically 3 to 6 months per course), does not allow us to achieve all 3 of these goals consistently. We can develop content that is high quality and relevant, but it is not timely. We can create content that is timely and relevant, but not at the requisite level of quality.
+
+Much of the problem is caused by the lack of product knowledge and expertise within the organization(s) that are responsible for writing content. To write expert level content, experts are needed. It is impractical to hire this expertise and it is unnecessary because it exists across the company.
+
+Quick Courses are a way for: 
+
+* PTL product team coordinates and maintains a roadmap of necessary content to satisfy relevance.
+* SMEs from around Red Hat work with PTL to develop content using more simple styles and standards to satisfy timeliness.
+* PTL content team edits, standardizes, and builds standardized hands-on lab automation to satisfy the quality requirements.
+
+
+== What is a Quick Course?
+
+A Quick Course is a course designed with the following guiding principles:
+
+* Show, Don’t Tell
+* Relevant Content 
+* Streamlined Development
+* Right Sized Content
+
+
+How are they built?
+First by identifying a need, sourcing a SME, building a design, and developing content. 
+
+In a later phase, Quick Courses may be pushed to market through a prioritization process, followed by lab + classroom automation, a round of reviews + editing, and final deployment.
 
 == High Level Process and Workflow
 
 The following diagram shows the high level workflow for quick courses content creation and publishing.
 
-NOTE: **TODO:** A workflow diagram goes here.....
+image::qc-workflow.png[title="Quick Course Content Creation & Publishing Workflow"]
 
 == Demonstration Video
 
